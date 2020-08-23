@@ -1,0 +1,46 @@
+
+How to git shelve changes and save local files with a stash
+
+git shelve	880	 -12%
+git shelve changes	390	 +22%
+git shelve vs stash	90	 -22%
+git stash vs shelve	30	 +27%
+shelve in git	30	 -25%
+git how to shelve changes	10	 0%
+git shelve equivalent	10	 0%
+
+***
+Wondering how to shelve changes in git? Looking for the shelve command? Sadly, that command doesn't exist, but stash is a git shelve equivalent that will more than satisfy your version control needs.
+***
+
+
+Right off the bat, it needs to be stated that there is no such thing as a git shelve command.
+
+The term 'shelve' references the commonly understood process of taking some temporary file changes, saving them locally and outside of your current version control system, and being able to return to those files at some point in the future. This concept is built right into the Git tool, but it's not named shelve. The git shelve equivalent is stash.
+
+git shelve vs stash
+The JetBrains IntelliJ IDE actually had a function called shelve that was popular with users, and the term shelve has ingrained itself into the vocabulary of developers, thus the perpetual git shelve vs stash confusion. But when you say git shelve, what you really mean is the equivalent git stash.
+
+
+How to shelve changes in Git
+The steps to successfully shelve in git is to issue the following command:
+
+/example/git shelve vs stash (branch)
+$ git stash push -m "git shelve changes"
+
+Note that this particular example uses a Git stash name which is helpful to identify elements in the stash list, but it is not required.
+
+To bring your git shelved changes back you simply perform a pop or apply:
+
+/example/git stash vs  shelve (branch)
+$ git stash apply
+
+
+How to shelve Git changes with the stash command.
+Stash is the git shelve equivalent
+Again, there is no command named shelve in git. If you are bent on creating one, you can always add an alias that triggers the stash command. But that would likely just compound the git stash vs shelve confusion. When you need to shelve changes with git, use the stash command. It's the proper Git command to use.
+
+
+
+
+

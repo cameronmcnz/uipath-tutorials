@@ -1,0 +1,9 @@
+June KWPs
+
+
+
+wildfly vs jboss	1,000
+
+wildfly vs tomcat	590
+	
+jboss vs tomcat	1,600

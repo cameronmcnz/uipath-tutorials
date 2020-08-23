@@ -1,0 +1,52 @@
+const in java	14,800
+const correctness	480
+const meaning	320
+const keyword	260
+i constantly feel like i have to poop	70
+
+
+Why is there no const in Java?
+
+Why is there no const keyword in Java?
+
+Why is the keyword const in Java not implemented?
+
+
+The original architects of the language made const in Java a reserved word. But the term has gone unimplemented and most likely never will. Which makes many wonder why.
+
+Anyone looking at the the Java const keyword would logically assume that it refers to a constant, and they would be correct. But what exactly does it mean for something to be constant in an object-oriented language?
+
+Does being constant mean an instance variable doesn't change?
+Does being constant mean a class variable doesn't change?
+Does being constant mean an object's methods can't be overridden?
+Does being constant mean an object reference doesn't change?
+Does being constant mean an object is immutable?
+
+And for that matter, can an object be constant under only certain circumstances. For example, some languages use the const keyword as part of a method signature, indicating that an object and it's properties can't change for the short period of time in which it is used inside a method. This is sometimes referred to as const-correctness. As you can see, trying to nail down the meaning of const can lead a developer down a rabbithole.
+
+In Java, the final keyword is used to mark an instance varable as constant, indicate a method cannot be overridden and specify that an object reference cannot change. When static and final keywords are combined it makes a class variable constant. So one reason why in Java the const keyword is unimplemented is because it's not needed. The Java's final keyword effectively and arguably more expressively provides the constant functionality in Java.
+
+In terms of immutable objects in Java, this has historically been achieved by declaring variables private and restricting access through setters and getters. More recently, Java has introduced the concept of value types as part of the JEP 169 which will add immutable, reference-free objects to the language.
+
+In terms of using const in Java to implement const-correctness, there was a discussion about doing so back in 1999 but the enhancement proposal was rejected as being feature creep, having the potential to cause code bloat and potentially break backwards comatibility. The idea of implementing const in Java has not been revisted since.
+
+So why make const a reserved word if there was no intention of implementing it?
+
+One possible reason is to just avoid confusion. If const was not a reserved word, developers could use it to name variables, which has the potential to cause great confusion with C++ and JavaScript developers who come from languages where the const keyword does have an implementation. Making it a reserved word helps to avoid any const keyword confusion.
+
+For the most part, because we don't need it, the const keyword has no implementation in Java. Other language features provide the ability to declare constants or provide immutability. And to avoid confusion, the purveyors of the language have decided that not even well-meanning developers could use the term in their code.
+
+
+
+https://openjdk.java.net/jeps/169
+https://bugs.java.com/bugdatabase/view_bug.do?bug_id=4211070
+
+
+
+
+
+
+
+
+
+

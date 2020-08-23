@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ReadPDFs" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1180,1691" sap2010:WorkflowViewState.IdRef="ReadPDFs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ReadPDFs" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1184,1545" sap2010:WorkflowViewState.IdRef="ReadPDFs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
@@ -51,7 +51,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReadPDFs" sap:VirtualizedContainerService.HintSize="580,1526" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReadPDFs" sap:VirtualizedContainerService.HintSize="580,1380" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="PFDFiles" />
     </Sequence.Variables>
@@ -68,13 +68,13 @@
         <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("C:\orders")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="538,1334" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[PFDFiles]">
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="538,1188" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[PFDFiles]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="file" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502,1200" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502,1054" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="total" />
               <Variable x:TypeArguments="x:String" Name="street" />
@@ -85,30 +85,18 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[file.ToString]" sap:VirtualizedContainerService.HintSize="460,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'AcroRd32.exe book-order...'" sap:VirtualizedContainerService.HintSize="460,981" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="432ad5896fb7554280b75027e2f5161c" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' omit:title='book-order*' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'AcroRd32.exe book-order...'" sap:VirtualizedContainerService.HintSize="460,835" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="432ad5896fb7554280b75027e2f5161c" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' omit:title='book-order*' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,835" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,689" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text 'text  85 Clover Ridge Dr'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
-                      <ui:GetValue.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="31a0c15c-f27e-4c03-9980-c79824a4d730" InformativeScreenshot="530b25a238755fa91aa14860bb5d2be2" Selector="&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='5' role='row' /&gt;&lt;ctrl name='85 Clover Ridge Dr   ' role='text' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:GetValue.Target>
-                    </ui:GetValue>
                     <ui:AnchorBase AnchorPosition="Top" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
                       <ui:AnchorBase.Action>
                         <ActivityAction x:TypeArguments="ui:Anchor">
